@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/petite-vue"></script>
+    <title>Task Manager with - Tailwind CSS - Petite Vue</title>
+  </head>
+  <body v-scope>
+    <h1 class="bg-blue-300 p-4 text-center text-white text-4xl">
+      Task Manager
+    </h1>
+    <div class="m-4">
+      <label class="text-lg" for="task">Add Your Tasks</label>
+      <input class="border-2 p-1 border-gray-600 m-4" type="text" name="task" />
+      <button
+        @click="addTask()"
+        class="border bg-yellow-600 text-white pl-4 pr-4 pt-2 pb-2 ml-4 rounded-md"
+      >
+        Add
+      </button>
+    </div>
+    <div>
+      <ol>
+        <li v-for="task in list">{{list}}</li>
+      </ol>
+    </div>
+
+    <script>
+      let taskManager = {
+        list: ["Task One", "Task Two", "Task Three"],
+        addTask: function () {
+          console.log("Add button pressed");
+        },
+      };
+
+      PetiteVue.createApp(taskManager).mount();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

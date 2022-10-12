@@ -1,0 +1,189 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, Arial, FreeSans, sans-serif;
+}
+
+/* Prenavbar  */
+section.pre-nav {
+  background-color: #e74c3c;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  align-items: center;
+  font-size: 17px;
+}
+
+.pre-nav-left {
+  margin-left: 150px;
+  padding: 18px;
+}
+
+.pre-nav-right {
+  /* margin-right: 150px; */
+  background-color: rgba(44, 62, 80, 0.4);
+  border-radius: 13px;
+  margin: 8px 150px;
+  padding: 2px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+.container {
+  width: 88%;
+  margin: auto;
+}
+
+/* Navbar  */
+section.navbar {
+  margin: 15px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+div.logo svg {
+  width: 100%;
+  height: 30px;
+}
+
+ul.nav-list {
+  display: flex;
+}
+
+ul.nav-list li {
+  list-style: none;
+}
+
+ul li a {
+  text-decoration: none;
+  color: gray;
+  padding: 10px 15px;
+  font-size: 17px;
+}
+
+ul li a:hover {
+  background: rgb(223, 217, 217);
+  border-radius: 40px;
+}
+
+/* SearchBar  */
+section.search-bar {
+  display: flex;
+  padding: 10px;
+  justify-content: space-between;
+  margin: 50px auto;
+  font-size: 16px;
+  border-radius: 33px;
+  font-weight: 500;
+  box-shadow: 0 4px 8px rgb(3 54 63 / 16%), 0 2px 4px rgb(3 54 63 / 8%),
+    0 1px 2px rgb(3 54 63 / 16%), 0 -1px 2px rgb(3 54 63 / 4%);
+}
+
+section.search-bar input,
+p {
+  padding: 16px;
+  border: none;
+  border-right: 1px solid gray;
+  font-size: 16px;
+}
+
+section.search-bar input {
+  color: #111;
+  font-weight: 500;
+}
+
+section.search-bar input::placeholder {
+  color: #111;
+  font-weight: 500;
+  /* letter-spacing: 1px; */
+}
+
+section.search-bar button {
+  padding: 15px 70px;
+  font-size: 17px;
+  background-color: #0969a1;
+  color: #fff;
+  font-weight: 700;
+  text-align: center;
+  border-radius: 33px;
+  cursor: pointer;
+  border: none;
+  transition: 0.5s;
+}
+
+section.search-bar button:hover {
+  background-color: #2a546d;
+}
+
+/* Slider  */
+section.slider {
+  width: 88%;
+  margin: auto;
+  background: linear-gradient(rgba(0, 0, 0, 0.5), #393b5000),
+    url("https://cdn.tourradar.com/s3/content-pages/391/1536x700/qKIZCT.jpg");
+  height: 350px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  background-position: 50%;
+  border-radius: 15px;
+  position: relative;
+  z-index: -1;
+}
+
+div.slider-heading h2 {
+  font-size: 38px;
+  line-height: 41px;
+  font-weight: 700;
+  color: #fff;
+  margin-top: 30px;
+  padding: 50px 30px 10px;
+}
+
+div.slider-heading p {
+  font-size: 16px;
+  color: #fff;
+  padding: 10px 30px;
+}
+
+/* Cards  */
+section.cards {
+  display: flex;
+  width: 83%;
+  margin: -50px auto 0;
+}
+
+section.cards div {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  padding: 7px;
+  border-radius: 11px;
+  margin: 7px;
+  background-color: #fff;
+}
+
+section.cards div:hover {
+  box-shadow: 0 4px 8px rgb(3 54 63 / 16%), 0 2px 4px rgb(3 54 63 / 8%),
+    0 1px 2px rgb(3 54 63 / 16%), 0 -1px 2px rgb(3 54 63 / 4%);
+}
+
+section.cards div img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  height: 146px;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+section.cards div p {
+  font-weight: 600;
+  border: none;
+}
+
+section.adventure {
+  display: flex;
+}

@@ -9,12 +9,13 @@
   </head>
   <body>
     <div class="container">
-      <input type="text" class="task-input" />
+      <h1>Task Manager</h1>
+      <input type="text" class="task-input" placeholder="Tasks" />
+      <input type="number" class="number-input" placeholder="Duration" />
 
-      <button onclick="addTask()">Add Tasks</button>
-      <button onclick="deleteTask()">Delete Tasks</button>
-      <button onclick="updateTask()">Update Tasks</button>
+      <button onclick="addTask()">Add Task</button>
 
+      <h3>Tasks</h3>
       <div class="tasks">
         <ol id="ol"></ol>
       </div>

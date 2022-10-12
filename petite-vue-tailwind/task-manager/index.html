@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/petite-vue"></script>
+    <title>Task Manager with Tailwind and Petite Vue Js</title>
+  </head>
+
+  <body v-scope>
+    <input class="border-2 p-2 m-1" v-model="selected" />
+    <button @click="addTask()">Add</button>
+    <ul class="p-4">
+      <li
+        class="flex p-1"
+        v-for="task in list"
+        @click="select(task)"
+        :class="{'bg-red-300': selected == task}"
+      >
+        {{task}}
+        <span class="pointer ml-auto" @click="deleteTask(task)">x</span>
+        <span class="pointer ml-auto" @click="updateTask(task)">U</span>
+      </li>
+    </ul>
+
+    <!-- javascript  -->
+    <script>
+      let tasks = {
+        list: ["taskOne", "taskTwo", "taskThree"],
+        selected: "",
+        select(item) {
+          this.selected = item;
+        },
+        addTask() {
+          this.list.push(this.selected);
+          this.selected = "";
+        },
+        deleteTask(item) {
+          let index = this.list.indexOf(item);
+          this.list.splice(index, 1);
+        },
+        updateTask(item) {
+          let index = this.list.indexOf(item);
+          this.list.splice(index, 1, this.selected);
+        },
+      };
+
+      PetiteVue.createApp(tasks).mount();
+    </script>
+
+    <script src="script.js"></script>
+  </body>
+</html>

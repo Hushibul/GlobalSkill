@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+
+    <script src="https://unpkg.com/petite-vue"></script>
+    <title>Calculator with Petite Vue Js and Tailwind CSS</title>
+  </head>
+  <body v-scope>
+    <div class="flex">
+      <input
+        class="p-2 rounded-md border-2 border-gray ml-10 mt-5"
+        type="number"
+        v-model="num1"
+        placeholder="Number One"
+      />
+      <input
+        class="p-2 rounded-md border-2 border-gray ml-10 mt-5"
+        type="number"
+        v-model="num2"
+        placeholder="Number Two"
+      />
+    </div>
+    <h2 class="ml-10 mt-5">{{result}}</h2>
+    <div class="flex ml-10 mt-5">
+      <button
+        @click="addition()"
+        class="p-2 border-2 bg-yellow-400 border-gray rounded-md cursor-pointer m-2"
+      >
+        Addition
+      </button>
+      <button
+        @click="subtraction()"
+        class="p-2 border-2 bg-yellow-400 border-gray rounded-md cursor-pointer m-2"
+      >
+        Subtraction
+      </button>
+      <button
+        @click="multiplication()"
+        class="p-2 border-2 bg-yellow-400 border-gray rounded-md cursor-pointer m-2"
+      >
+        Multiplication
+      </button>
+      <button
+        @click="division()"
+        class="p-2 border-2 bg-yellow-400 border-gray rounded-md cursor-pointer m-2"
+      >
+        Division
+      </button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
